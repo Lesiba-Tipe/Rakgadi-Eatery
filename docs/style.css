@@ -14,10 +14,6 @@ body{
     align-content: center;
 }
 
-@media only screen and (min-width: 768px) {
-    /* 
-        DESKTOP
-    */ 
 
 
    #footer{
@@ -77,6 +73,12 @@ body, html {
     margin: auto;
     width: 40%;
   } 
+
+  
+  @media only screen and (min-width: 768px) {
+    /* 
+        DESKTOP
+    */ 
 
 
 }
