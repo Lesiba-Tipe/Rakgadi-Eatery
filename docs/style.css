@@ -4,6 +4,8 @@
   MOBILE
 */
 body{
+    display: flex;
+    flex-direction: column;
     font-family: 'Century Gothic';
     color:#020202;
 }
@@ -15,20 +17,18 @@ body{
 }
 
 
-
-   #footer{
-    height: 100px;
-    background-color: rgb(93, 160, 219);
-   }
-
     /* Set height to 100% for body and html to enable the background image to cover the whole page: */
 body, html {
     height: 100%
   }
   
-  .bgimg {
+  @media only screen and (min-width: 768px) {
+    /* 
+        DESKTOP
+    */ 
+  .frame {
     /* Background image */
-    background-image: url('/w3images/forestbridge.jpg');
+    background-image: url('./assets/page-1.jpg');
     /* Full-screen */
     height: 100%;
     /* Center the background image */
@@ -38,49 +38,81 @@ body, html {
     /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
     position: relative;
     /* Add a white text color to all elements inside the .bgimg container */
-    color: white;
-    /* Add a font */
-    font-family: "Courier New", Courier, monospace;
-    /* Set the font-size to 25 pixels */
+    color: rgb(255, 255, 255);
     font-size: 25px;
   }
   
-  /* Position text in the top-left corner */
-  .topleft {
-    position: absolute;
-    top: 0;
-    left: 16px;
+  .nav-bar{
+    height: auto;
+    display: grid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-template-columns: 1fr 1fr;
+    background-color: #000000cc; 
+    align-items: center;
+  }
+
+  .button {
+    border-radius: 1px;
+    border: 2px solid #73AD21;
+    width: 100px;
+    height: 50px;
+    transition-duration: 0.2s;
+    background-color: #020202cc;
+    color: #ffffff;
   }
   
-  /* Position text in the bottom-left corner */
-  .bottomleft {
-    position: absolute;
+  .button:hover {
+    border: 2px solid #070707;
+    background-color: #ffffff; /* Green */
+    color: rgb(185, 141, 44);
+  }
+
+  .img-logo{
+    /* background-image: url(./assets/logo.png); */
+    width: 5rem;
+    height: auto;
+  }
+
+  .button-group{
+    height: 45%;
+    /* background-color: rgb(177, 128, 69); */
+  }
+
+  #welcome-note{
+    height: 45%;
+    /* background-color: #8a8a8a; */
+  }
+
+  footer{
+    display: flex;
+    flex-direction: row;
+    /* height: 40%; */
+    align-content: center;
+    align-items: center;
+    background-color: #000000cc; 
+    color: #cccccc;
+    position: fixed;
+    left: 0;
     bottom: 0;
-    left: 16px;
+    width: 100%;
   }
-  
-  /* Position text in the middle */
-  .middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+
+  #footer-content{
+    height: auto;
+    background-color: brown;
+  }
+
+  #address{
     text-align: center;
   }
-  
-  /* Style the <hr> element */
-  hr {
-    margin: auto;
-    width: 40%;
-  } 
-
-  
-  @media only screen and (min-width: 768px) {
-    /* 
-        DESKTOP
-    */ 
-
-
+  #dev-content{
+    text-align: center;
+    font-size: 13px;
+    height: auto;
+    /* background-color: #4c98af; */
+  }
 }
 
 
