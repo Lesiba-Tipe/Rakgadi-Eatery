@@ -1,4 +1,30 @@
 {
+    "menu": {
+        "starter":[
+            "Pap and Mogodu",
+            "Pap and malana, maotwana,liver",
+            "Pap and hardbody chicken",
+            "Pap/Dombolo and beef stew",
+            "Samp and beef stew",
+            "Braai plate"
+        ],
+        "kota":[
+            "Chips, Polony, cheese, egg burger patty",
+            "Chips, Polony, cheese, egg, vienna, russian",
+            "Chips, Polony, cheese, egg, burger patty, vienna, russian"
+        ],
+        "sides":[
+            "Cabbage",
+            "Coleslaw",
+            "Chakalaka",
+            "Beetroot"
+        ],
+        "chips": [
+            "Small chips",
+            "Medium chips",
+            "Large chips"
+        ]
+    },
     "specials":[
         "Mogodu", "Monday","Extra"
     ],
@@ -16,5 +42,14 @@
         "weekdays": "09H00 - 18H00",
         "weekends": "09H00 - 18H00",
         "holidays": "09H00 - 18H00"
-    }
+    },
+    "social-media":[
+        "https://twitter.com/carolinerathabe",
+        "https://www.instagram.com/carolinerathabe/"
+    ]
 }
+
+
+
+
+

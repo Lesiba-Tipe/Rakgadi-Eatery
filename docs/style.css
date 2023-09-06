@@ -1,4 +1,7 @@
-/*
+/*PRIMARY COLORS
+  #B16127
+  #603917
+
   MOBILE
 */
 body{
@@ -24,10 +27,12 @@ body, html {
         DESKTOP
     */ 
   .frame {
+    display: flex;
+    flex-direction: column;
     /* Background image */
     background-image: url('./assets/page-1.jpg');
     /* Full-screen */
-    height: 100%;
+    /* height: 100%; */
     /* Center the background image */
     background-position: center;
     /* Scale and zoom in the image */
@@ -39,55 +44,94 @@ body, html {
     font-size: 25px;
   }
   
+  .navbar-container{
+    width: 100%;
+    border-bottom: 1px solid #ffffff;
+    background-color: #000000cc; 
+  }
   .nav-bar{
     height: auto;
-    display: grid;
+    display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
-    grid-template-columns: 1fr 1fr;
-    background-color: #000000cc; 
+    flex-direction: row;
+    
     align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  .button1 {
+    border-radius: 1px;
+    
+    width: 7em;
+    height: 50px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    transition-duration: 0.2s;
+    background-color: #B16127cc;
+    color: #020202;
   }
 
   .button {
-    border-radius: 1px;
-    border: 2px solid #73AD21;
-    width: 100px;
+    padding-bottom: 0px;
+    border-radius: 0px;
+    border-bottom: 2px solid #ffffff;
+    width: 7em;
     height: 50px;
-    transition-duration: 0.2s;
-    background-color: #020202cc;
+    transition-duration: 0.2s;   
     color: #ffffff;
+    margin-left: 2em;
   }
   
   .button:hover {
-    border: 2px solid #070707;
-    background-color: #ffffff; /* Green */
-    color: rgb(185, 141, 44);
+    border-bottom: 2px solid #B16127;
+    color: #B16127;
   }
 
   .img-logo{
-    width: 5rem;
+    width: 4rem;
     height: auto;
   }
 
   .button-group{
-    height: 45%;
+    height: 35%;
   }
 
   #welcome-note{
-    height: 45%;
-
+    
+    height: 35%;
+    background-color: #b1602779;
+  }
+  .container h2{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid #ffffff;
+    font-family: Viner Hand ITC;
   }
 
+  #special, #starter, #kota, #chips, #sides{
+    padding-left: 1em;
+    padding-right: 2em;
+    padding-top: 1em;
+    color: #ffffff;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #b16027ad;
+    /* height: 10em; */
+  }
+
+  
   footer{
     display: flex;
     flex-direction: row;
-    /* height: 40%; */
+    font-size: 14px;
     align-content: center;
     align-items: center;
-    background-color: #000000cc; 
+    background-color: #B16127; 
     color: #cccccc;
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;
