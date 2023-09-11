@@ -17,6 +17,7 @@ body{
     align-content: center;
 }
 
+
     /* Set height to 100% for body and html to enable the background image to cover the whole page: */
 body, html {
     height: 100%
@@ -48,6 +49,7 @@ body, html {
     width: 100%;
     border-bottom: 1px solid #ffffff;
     background-color: #000000cc; 
+    position: fixed;
   }
   .nav-bar{
     height: auto;
@@ -76,7 +78,7 @@ body, html {
   .button {
     padding-bottom: 0px;
     border-radius: 0px;
-    border-bottom: 2px solid #ffffff;
+    /* border-bottom: 2px solid #ffffff; */
     width: 7em;
     height: 50px;
     transition-duration: 0.2s;   
@@ -90,7 +92,7 @@ body, html {
   }
 
   .img-logo{
-    width: 4rem;
+    width: 3rem;
     height: auto;
   }
 

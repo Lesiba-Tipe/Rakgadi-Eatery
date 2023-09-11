@@ -2,6 +2,15 @@
 
 path = 'http://localhost:3000/data'   //for testing
 //path = './shared/data.json'         //for Development
+function menu_bar() {
+  var x = document.getElementById("links");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+} 
+
 
 fetch(path)
   .then(response => response.json())
@@ -22,12 +31,6 @@ fetch(path)
     div_addressElement = document.createElement('div'); 
     div_dev_contentElement = document.createElement('div'); 
 
-    //p_dev_content.setAttribute('id','dev-content')
-
-    //devElement = document.getElementById('dev-content') <p><a href="html_images.asp">HTML Images</a></p>
-
-    //addressElement = '<address>' + physicaladdress.street + '<br>' + physicaladdress.city +'<br>'+ physicaladdress.province +'<br>'+ physicaladdress.code + '</address>'
-    //array1.forEach((element) => console.log(element));
     console.log('Menu.STARTER: ',menu.starter)
 
     p_starterElement = '<p>'
@@ -54,21 +57,14 @@ fetch(path)
     addressElement = '<address id="address"> <b>Physical Address</b> <br> ' + physicaladdress.street + '<br>' + physicaladdress.city +'<br>'+ physicaladdress.province +'<br>'+ physicaladdress.code + '</address>'
     dev_contentElement = '<p id="dev-content"> Developed by: <a style="color:#ffffff" href="https://www.tipegraphics.co.za/"> ' + developer.name + '</a>   | '+ new Date().getFullYear() + ' | &copy; Copyright reserved<p/>'
 
-    //div_addressElement.append(addressElement)
-    //div_starter.innerHTML += p_starterElement
-
-
-
     div_addressElement.innerHTML += addressElement
     div_dev_contentElement.innerHTML += dev_contentElement
 
     footer.append(div_addressElement)
-    //footer.append(div_)
     footer.append(div_dev_contentElement)
-
 
   })
   .catch(error => {
-    alert('Make sure local server is running...\nERROR: '+ error)
     console.error('Error:', error);
+    alert('Make sure local server is running...\nERROR: '+ error)
   });
