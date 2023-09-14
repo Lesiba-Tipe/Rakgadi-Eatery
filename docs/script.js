@@ -1,6 +1,6 @@
 //ACCESS SERVER
-//path = 'http://localhost:3000/data'// ||  './shared/data.json'  //for testing const PORT = process.env.PORT || 3000;
-path = './shared/data.json'         //for Development
+path = 'http://localhost:3000/data' ||  './shared/database.json'  //for testing const PORT = process.env.PORT || 3000;
+//path = './shared/database.json'         //for Development
 
 
 $(document).ready(function(){
