@@ -11,4 +11,4 @@ express()
     //.get('/', (req, res) => res.sendFile(path.resolve('../docs/index.html')))
     .get('/data', (req, res) => res.sendFile(path.resolve('../docs/shared/database.json')))
 
-    .listen(PORT, () => console.log(`Listening on localhost: http://localhost:${ PORT }/..123....`))
+    .listen(PORT, () => console.log(`Listening on localhost: http://localhost:${ PORT }/`))
