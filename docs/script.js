@@ -1,6 +1,6 @@
 //ACCESS SERVER
 
-path = 'http://localhost:3000/data'   //for testing
+path = 'http://localhost:3000/data' ||  './shared/data.json'  //for testing const PORT = process.env.PORT || 3000;
 //path = './shared/data.json'         //for Development
 function menu_bar() {
   var x = document.getElementById("links");
