@@ -1,17 +1,43 @@
 //ACCESS SERVER
+path = 'http://localhost:3000/data'// ||  './shared/data.json'  //for testing const PORT = process.env.PORT || 3000;
+//path = './shared/data.json'         //for Development
 
-const path = require("path");
 
-//path = 'http://localhost:3000/data' ||  './shared/data.json'  //for testing const PORT = process.env.PORT || 3000;
-path = './shared/data.json'         //for Development
-function menu_bar() {
-  var x = document.getElementById("links");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
+$(document).ready(function(){
+  function menu_bar() {
+    var x = document.getElementById("links");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  } 
+
+  const WEEK = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+  function updateTime() {
+      var now = new Date();
+
+      document.getElementById("time").innerText =
+              zeroPadding(now.getHours(), 2) + ":" +
+              zeroPadding(now.getMinutes(), 2) + ":" +
+              zeroPadding(now.getSeconds(), 2);
+
+      document.getElementById("date").innerText =
+              now.getFullYear() + "-" +
+              zeroPadding(now.getMonth() + 1, 2) + "-" +
+              zeroPadding(now.getDate(), 2) + " " +
+              WEEK[now.getDay()];
   }
-} 
+
+  updateTime();
+  setInterval(updateTime, 1000);
+
+  function zeroPadding(num, digit) {
+      return String(num).padStart(digit, '0');
+  }
+
+})
 
 
 fetch(path)
