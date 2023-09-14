@@ -1,7 +1,9 @@
 //ACCESS SERVER
 
-path = 'http://localhost:3000/data' ||  './shared/data.json'  //for testing const PORT = process.env.PORT || 3000;
-//path = './shared/data.json'         //for Development
+const path = require("path");
+
+//path = 'http://localhost:3000/data' ||  './shared/data.json'  //for testing const PORT = process.env.PORT || 3000;
+path = './shared/data.json'         //for Development
 function menu_bar() {
   var x = document.getElementById("links");
   if (x.style.display === "block") {
@@ -15,6 +17,7 @@ function menu_bar() {
 fetch(path)
   .then(response => response.json())
   .then(data => {
+    console.log('PATH: ', path)
     console.log('DATA: ',data)
     
     developer = data.developer
@@ -66,7 +69,7 @@ fetch(path)
   })
   .catch(error => {
     console.error('Error:', error);
-    alert('Make sure local server is running...\nERROR: '+ error)
+    //alert('Make sure local server is running...\nERROR: '+ error)
   });
 
   
