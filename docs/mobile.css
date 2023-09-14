@@ -1,0 +1,177 @@
+ /* Style the navigation menu 
+ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+ */
+ 
+
+  @media only screen and (max-width: 767px) {
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+      position: relative;
+    }
+    
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #links {
+      display: none;
+    }
+    
+    /* Style navigation menu links */
+    .topnav a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+    }
+    
+    /* Style the hamburger menu */
+    .topnav a.icon {
+      background: black;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    /* Style the active link (or home/logo) */
+    .active {
+      background-color: #04AA6D;
+      color: white;
+    } 
+
+    .frame {
+      display: flex;
+      flex-direction: column;
+      /* Background image */
+      background-image: url('./assets/page-1.jpg');
+      /* Full-screen */
+      /* height: 100%; */
+      /* Center the background image */
+      background-position: center;
+      /* Scale and zoom in the image */
+      background-size: cover;
+      /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+      position: relative;
+      /* Add a white text color to all elements inside the .bgimg container */
+      color: rgb(255, 255, 255);
+      font-size: 25px;
+    }
+    
+    .navbar-container{
+      width: 100%;
+      border-bottom: 1px solid #ffffff;
+      background-color: #000000cc; 
+      position: fixed;
+    }
+    .nav-bar{
+      height: auto;
+      display: flex;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      flex-direction: row;
+      
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+  
+    .button1 {
+      border-radius: 1px;
+      
+      width: 7em;
+      height: 50px;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      transition-duration: 0.2s;
+      background-color: #B16127cc;
+      color: #020202;
+    }
+  
+    .button {
+      padding-bottom: 0px;
+      border-radius: 0px;
+      /* border-bottom: 2px solid #ffffff; */
+      width: 7em;
+      height: 50px;
+      transition-duration: 0.2s;   
+      color: #ffffff;
+      margin-left: 2em;
+    }
+    
+    .button:hover {
+      border-bottom: 2px solid #B16127;
+      color: #B16127;
+    }
+  
+    .img-logo{
+      width: 4rem;
+      height: auto;
+    }
+  
+    .button-group{
+      height: 35%;
+    }
+  
+    #welcome-note{
+      
+      height: 35%;
+      background-color: #b1602779;
+    }
+    .container h2{
+      padding-left: 10px;
+      padding-right: 10px;
+      border-bottom: 1px solid #ffffff;
+      font-family: Viner Hand ITC;
+    }
+  
+    #special, #starter, #kota, #chips, #sides{
+      padding-left: 1em;
+      padding-right: 2em;
+      padding-top: 1em;
+      color: #ffffff;
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+      background-color: #b16027ad;
+      /* height: 10em; */
+    }
+  
+    
+    footer{
+      display: flex;
+      flex-direction: row;
+      font-size: 14px;
+      align-content: center;
+      align-items: center;
+      background-color: #B16127; 
+      color: #cccccc;
+      /* position: fixed; */
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  
+  
+    #footer-content{
+      height: auto;
+      background-color: brown;
+    }
+  
+    #address{
+      text-align: center;
+    }
+    #dev-content{
+      text-align: center;
+      font-size: 13px;
+      height: auto;
+      /* background-color: #4c98af; */
+    }
+
+  }

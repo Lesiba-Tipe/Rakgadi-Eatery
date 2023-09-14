@@ -1,9 +1,12 @@
+/*PRIMARY COLORS
+  #B16127
+  #603917
 
-
-/*
   MOBILE
 */
 body{
+    display: flex;
+    flex-direction: column;
     font-family: 'Century Gothic';
     color:#020202;
 }
@@ -15,22 +18,22 @@ body{
 }
 
 
-
-   #footer{
-    height: 100px;
-    background-color: rgb(93, 160, 219);
-   }
-
     /* Set height to 100% for body and html to enable the background image to cover the whole page: */
 body, html {
     height: 100%
   }
   
-  .bgimg {
+  @media only screen and (min-width: 768px) {
+    /* 
+        DESKTOP
+    */ 
+  .frame {
+    display: flex;
+    flex-direction: column;
     /* Background image */
-    background-image: url('/w3images/forestbridge.jpg');
+    background-image: url('./assets/page-1.jpg');
     /* Full-screen */
-    height: 100%;
+    /* height: 100%; */
     /* Center the background image */
     background-position: center;
     /* Scale and zoom in the image */
@@ -38,49 +41,120 @@ body, html {
     /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
     position: relative;
     /* Add a white text color to all elements inside the .bgimg container */
-    color: white;
-    /* Add a font */
-    font-family: "Courier New", Courier, monospace;
-    /* Set the font-size to 25 pixels */
+    color: rgb(255, 255, 255);
     font-size: 25px;
   }
   
-  /* Position text in the top-left corner */
-  .topleft {
-    position: absolute;
-    top: 0;
-    left: 16px;
+  .navbar-container{
+    width: 100%;
+    border-bottom: 1px solid #ffffff;
+    background-color: #000000cc; 
+    position: fixed;
+  }
+  .nav-bar{
+    height: auto;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  .button1 {
+    border-radius: 1px;
+    
+    width: 7em;
+    height: 50px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    transition-duration: 0.2s;
+    background-color: #B16127cc;
+    color: #020202;
+  }
+
+  .button {
+    padding-bottom: 0px;
+    border-radius: 0px;
+    /* border-bottom: 2px solid #ffffff; */
+    width: 7em;
+    height: 50px;
+    transition-duration: 0.2s;   
+    color: #ffffff;
+    margin-left: 2em;
   }
   
-  /* Position text in the bottom-left corner */
-  .bottomleft {
-    position: absolute;
+  .button:hover {
+    border-bottom: 2px solid #B16127;
+    color: #B16127;
+  }
+
+  .img-logo{
+    width: 3rem;
+    height: auto;
+  }
+
+  .button-group{
+    height: 35%;
+  }
+
+  #welcome-note{
+    
+    height: 35%;
+    background-color: #b1602779;
+  }
+
+  .container h2{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid #ffffff;
+    font-family: Viner Hand ITC;
+  }
+
+  #special, #starter, #kota, #chips, #sides{
+    padding-left: 1em;
+    padding-right: 2em;
+    padding-top: 1em;
+    color: #ffffff;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #b16027ad;
+    /* height: 10em; */
+  }
+
+  
+  footer{
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    align-content: center;
+    align-items: center;
+    background-color: #B16127; 
+    color: #cccccc;
+    /* position: fixed; */
+    left: 0;
     bottom: 0;
-    left: 16px;
+    width: 100%;
   }
-  
-  /* Position text in the middle */
-  .middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+
+  #footer-content{
+    height: auto;
+    background-color: brown;
+  }
+
+  #address{
     text-align: center;
   }
-  
-  /* Style the <hr> element */
-  hr {
-    margin: auto;
-    width: 40%;
-  } 
-
-  
-  @media only screen and (min-width: 768px) {
-    /* 
-        DESKTOP
-    */ 
-
-
+  #dev-content{
+    text-align: center;
+    font-size: 13px;
+    height: auto;
+    /* background-color: #4c98af; */
+  }
 }
 
 
