@@ -1,164 +1,273 @@
 /*PRIMARY COLORS
   #B16127
   #603917
-
-  MOBILE
 */
+
+/* GlOBAL */
+
 body{
-    display: flex;
-    flex-direction: column;
-    font-family: 'Century Gothic';
-    color:#020202;
+  background-size: cover; /* or contain for a different effect */
+  background-position: center center;
+  height: 100vh; /* You can set the height as needed */
+  width: 100%;
+  font-family: 'Century Gothic';
+  background-image: url('./assets/page-1.jpg');
+  overflow-x: hidden;
 }
-.notFound{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
+
+.frame{
+  margin: 0;
 }
 
 
-    /* Set height to 100% for body and html to enable the background image to cover the whole page: */
-body, html {
-    height: 100%
-  }
+.flex{
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap,1rem);
+} 
+
+/* PRIMARY HEADER */
+.primary-header{
+  align-items: center;
+  justify-content: space-between;
+  background-color: #B1612780;
   
-  @media only screen and (min-width: 768px) {
-    /* 
-        DESKTOP
-    */ 
-  .frame {
-    display: flex;
-    flex-direction: column;
-    /* Background image */
-    background-image: url('./assets/page-1.jpg');
-    /* Full-screen */
-    /* height: 100%; */
-    /* Center the background image */
-    background-position: center;
-    /* Scale and zoom in the image */
-    background-size: cover;
-    /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
-    position: relative;
-    /* Add a white text color to all elements inside the .bgimg container */
-    color: rgb(255, 255, 255);
-    font-size: 25px;
-  }
+  padding: 1rem;
+}
+
+.logo{
+  margin: rem;
+  width: 3.5em;
+}
+ 
+/* Primary Navigation */ 
+.primary-navigation{
+flex-direction: row;
+gap: 2.5rem;
+list-style: none;  
+padding: 0;
+margin: 0;
+
+}
+
+.primary-navigation a {
+  text-decoration: none;
+  color: #fff;
+  padding: .4em 1em;
+}
+
+.primary-navigation li :hover{
+  color: #B16127;
+  background-color: #ffffff8e; 
+  transition-duration: 0.3s;
+  border-bottom: 3px solid #B16127;
+}
+
+.mobile-nav-toogle {
+  display: none;
+}
+
+/*
+------------------------------------------------------
+GLOBAL-BODY
+------------------------------------------------------
+*/
+.btn-group{
+  display: none;
+}
+
+
+.welcome-group{
+  display: flex;
+  flex-direction: column;
+  padding-top: 3em;
+  gap: 2em;
+  background-color: #0000006b;
+}
+.welcome-logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   
-  .navbar-container{
+}
+
+.logo-title{
+  width: 10rem; 
+  border-radius: 100%;
+  /* background-color: #0000006b; */
+}
+
+
+.welcome-tittle-1{
+  font-size: 3em;
+  color: #DDA21D;
+  text-align: center;
+}
+
+.welcome-tittle-2{
+  font-size: 5.5em;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+.welcome-msg{
+  color: #fff;
+  padding-top: .6rem;
+  padding-bottom: .2rem;
+  text-align: center;
+  
+}
+
+/*
+------------------------------------------------------
+GLOBAL-MENU
+------------------------------------------------------
+*/
+.menu {
+  text-align: center;
+  color: #fff;
+  background-color: #0000006b;
+}
+
+
+
+
+/*
+------------------------------------------------------
+MOBILE
+------------------------------------------------------
+*/
+@media (max-width: 35em) {
+
+  body{
+    background-image: url('./assets/bg-mobile.jpg');   
+    
+  }
+
+  .btn-line{
     width: 100%;
-    border-bottom: 1px solid #ffffff;
-    background-color: #000000cc; 
-    position: fixed;
-  }
-  .nav-bar{
-    height: auto;
-    display: flex;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    flex-direction: row;
-    
-    align-items: center;
-    justify-content: space-between;
-    
+    color: #fff;
+    height: 1em;
+    background-color: #fff;
   }
 
-  .button1 {
-    border-radius: 1px;
-    
-    width: 7em;
-    height: 50px;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    transition-duration: 0.2s;
-    background-color: #B16127cc;
-    color: #020202;
-  }
-
-  .button {
-    padding-bottom: 0px;
-    border-radius: 0px;
-    /* border-bottom: 2px solid #ffffff; */
-    width: 7em;
-    height: 50px;
-    transition-duration: 0.2s;   
-    color: #ffffff;
-    margin-left: 2em;
-  }
-  
-  .button:hover {
-    border-bottom: 2px solid #B16127;
-    color: #B16127;
-  }
-
-  .img-logo{
-    width: 3rem;
-    height: auto;
-  }
-
-  .button-group{
-    height: 35%;
-  }
-
-  #date, #time{
-    font-size: .9rem;
-    color: chartreuse;
-  }
-  #welcome-note{
-    
-    height: 35%;
-    background-color: #b1602779;
-  }
-
-  .container h2{
-    padding-left: 10px;
-    padding-right: 10px;
-    border-bottom: 1px solid #ffffff;
-    font-family: Viner Hand ITC;
-  }
-
-  #special, #starter, #kota, #chips, #sides, #about{
-    padding-left: 1em;
-    padding-right: 2em;
-    padding-top: 1em;
-    color: #ffffff;
-    margin-top: 2rem;
+  .primary-navigation{
+    z-index: 1000;
+    flex-direction: column; 
+    gap: 1.5em;
+    padding: min(20vh, 10rem) 0;
     text-align: center;
+
+    position: fixed; 
+    inset: 0 0 0 30%;
+ 
+    transform: translateX(100%);
+    transition: transform 350ms ease-in;
+
+    
+    background-color: hsla(0, 0%, 20%, 0.719);
+    /* backdrop-filter: blur(.09rem); */
+  }
+
+  .primary-navigation li {
+    background-color: #b16027b0;
+    padding: .5em 0;
+  }
+
+  .primary-navigation[data-visible="true"]{ 
+    transform: translateX(0%);
+  }
+
+  .mobile-nav-toogle {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    background-color: transparent;
+    background-image: url('./assets/icon-humburger-menu.svg');
+    background-repeat: no-repeat;
+
+    width: 2.2rem;
+    border: 0;
+    aspect-ratio: 1;
+    /* top: 1rem;*/
+    right: 1rem; 
+  }
+
+  .mobile-nav-toogle[aria-expanded="true"] {
+    background-image: url('./assets/icon-close.svg');
+    /* background-color: red; */
+  }
+
+/*
+------------------------------------------------------
+MOBILE-WELCOME-GROUP
+------------------------------------------------------
+*/
+
+
+} 
+
+/*
+------------------------------------------------------
+TABLET
+------------------------------------------------------
+*/
+
+@media (min-width: 35em) and (max-width:55em) {
+
+  .primary-navigation{
+
+    font-size: 1.1rem;
+    gap: .5rem;
+
+  }
+}
+
+/*
+------------------------------------------------------
+DESKTOP
+------------------------------------------------------
+*/
+@media (min-width: 55em) {
+
+  .primary-header{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .primary-navigation {
+
     font-size: 1.2rem;
-    background-color: #b16027ad;
-    /* height: 10em; */
   }
 
-  
-  footer{
-    display: flex;
-    flex-direction: row;
-    font-size: 14px;
-    align-content: center;
-    align-items: center;
-    background-color: #B16127; 
-    color: #cccccc;
-    /* position: fixed; */
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
+  /* 
+------------------------------------------------------
+DESKTOP-BODY
+------------------------------------------------------
+*/
 
 
-  #footer-content{
-    height: auto;
-    background-color: brown;
-  }
+}
 
-  #address{
-    text-align: center;
-  }
-  #dev-content{
-    text-align: center;
-    font-size: 13px;
-    height: auto;
-    /* background-color: #4c98af; */
-  }
+
+/* 
+------------------------------------------------------
+UTILYTY
+------------------------------------------------------
+*/
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
 }
 
 
