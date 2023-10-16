@@ -29,5 +29,10 @@ const buttons = document.querySelectorAll(".btn_nav");
 
 });
 
+ const div_dev_contentElement = document.getElementById('developer');
+
+ const dev_contentElement = '<p> Developed by: <span href="https://tipegraphics.co.za/" >Tipe Graphics</span>   | '+ new Date().getFullYear() + ' | &copy; Copyright reserved<p/>'
+
+ div_dev_contentElement.innerHTML += dev_contentElement
 
   
